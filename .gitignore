@@ -1,0 +1,3 @@
+gcp_instance*
+terraform.tfstate*
+.terraform*

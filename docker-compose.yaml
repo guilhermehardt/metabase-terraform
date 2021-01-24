@@ -1,0 +1,19 @@
+version: '3'
+services:
+  metabase:
+    container_name: metabase
+    image: metabase/metabase:v0.37.4
+    ports:
+      - "3000:3000"
+    volumes:
+      - /metabase/data:/metabase-data
+    env_file:
+      - env_file
+    networks:
+      - web
+    restart: always
+
+networks:
+  web:
+    driver: bridge
+
